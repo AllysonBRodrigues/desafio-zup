@@ -2,6 +2,8 @@ package allyson.com.br.desafio_zup.presentation.main;
 
 import android.util.Log;
 
+import java.util.List;
+
 import allyson.com.br.desafio_zup.data.api.Repository;
 import allyson.com.br.desafio_zup.model.Movie;
 import retrofit2.Call;
@@ -26,7 +28,7 @@ public class SearchPresentation implements SearchContracts.Presentation {
 
     @Override
     public void getMovie(String nome) {
-        repository.requestConteudos(new Callback<Movie>() {
+        repository.requestMovies(new Callback<Movie>() {
             @Override
             public void onResponse(Call<Movie> call, Response<Movie> response) {
                 view.returnMovie(response.body());
@@ -34,7 +36,7 @@ public class SearchPresentation implements SearchContracts.Presentation {
 
             @Override
             public void onFailure(Call<Movie> call, Throwable t) {
-
+                Log.e("ERRO", "ERRo");
             }
         }, nome);
     }

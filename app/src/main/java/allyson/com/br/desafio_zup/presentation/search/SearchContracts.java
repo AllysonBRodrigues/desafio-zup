@@ -1,5 +1,9 @@
 package allyson.com.br.desafio_zup.presentation.search;
 
+import android.os.Bundle;
+
+import java.util.List;
+
 import allyson.com.br.desafio_zup.data.api.Repository;
 import allyson.com.br.desafio_zup.model.Movie;
 
@@ -18,9 +22,12 @@ interface SearchContracts {
 
 
     interface View {
-        void returnMovie(Movie movies);
+        void returnMovie(Movie movie);
 
         void erro();
+
+        void checkInstanceState(Bundle instanceState);
+
     }
 
 

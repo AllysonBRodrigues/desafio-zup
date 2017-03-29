@@ -1,5 +1,7 @@
 package allyson.com.br.desafio_zup.data.api;
 
+import java.util.List;
+
 import allyson.com.br.desafio_zup.Util.URL;
 import allyson.com.br.desafio_zup.data.service.IMovie;
 import allyson.com.br.desafio_zup.data.service.Service;
@@ -13,7 +15,7 @@ import retrofit2.Callback;
 
 public class Maneger implements Repository{
     @Override
-    public void requestConteudos(Callback<Movie> callback, String movie) {
+    public void requestMovies(Callback<Movie> callback, String movie) {
         Service.getService(IMovie.class, URL.URL_PRINCIPAL).getMovie(movie).enqueue(callback);
     }
 }

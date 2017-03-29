@@ -1,5 +1,7 @@
 package allyson.com.br.desafio_zup.data.service;
 
+import java.util.List;
+
 import allyson.com.br.desafio_zup.model.Movie;
 import retrofit2.Call;
 import retrofit2.http.GET;

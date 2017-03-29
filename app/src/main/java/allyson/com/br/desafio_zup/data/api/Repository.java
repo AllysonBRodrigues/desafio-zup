@@ -1,5 +1,7 @@
 package allyson.com.br.desafio_zup.data.api;
 
+import java.util.List;
+
 import allyson.com.br.desafio_zup.model.Movie;
 import retrofit2.Callback;
 
@@ -10,6 +12,6 @@ import retrofit2.Callback;
 
 public interface Repository {
 
-    void requestConteudos(Callback<Movie> callback, String movie);
+    void requestMovies(Callback<Movie> callback, String movie);
 
 }
